@@ -7,3 +7,5 @@ Random Forest,
 Decesion Tree, 
 Gradient boosting, 
 Linear Regression
+
+![image](https://github.com/nishaanandni/Calorie-Prediction/assets/116377565/8a6af66c-4746-4448-a224-94b3da6bab0d)
