@@ -1,5 +1,5 @@
 # Calorie-Prediction
-The Calorie Predictor project utilizes machine learning regression algorithms to estimate calorie burn during physical activities. By analyzing various factors such as activity type, duration, intensity, and personal metrics (e.g., age, weight, height), the model provides accurate predictions of the calories expended. This tool can assist individuals in tracking their fitness progress and managing their health goals more effectively.
+The Calorie Predictor project features a web interface where users can input their activity data and personal metrics to receive an estimate of calories burned. Leveraging machine learning regression algorithms, the tool analyzes factors such as activity type, duration, intensity, age, weight, and height to provide accurate calorie burn predictions. This user-friendly interface helps individuals easily track their fitness progress and manage their health goals.
 
 Algorithms used:
 XGB regressor,
