@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Calorie Burn Checker</title>
+</head>
+<body>
+    <div class="main">
+        <div class="left-section">
+            <h2>Calorie <br> Burn Predictor</h2>
+        </div>
+        <div class="right-section">
+            <form action="{{ url_for('predict')}}" method="POST">
+                <h2 class="text-center"><strong>Check the Calorie Burned</strong></h2>
+                <h2 class="text-center">
+                    {% if prediction_text %}
+                        <strong>{{ prediction_text }}</strong>
+                    {% endif %}
+                </h2>
+                <div class="form-group">
+                    <label for="gender"></label>
+                    <select class="form-control" id="gender" name="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age"></label>
+                    <input class="form-control" type="text" id="age" name="age" placeholder="Enter Age" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="height"></label>
+                    <input class="form-control" type="text" id="height" name="height" placeholder="Enter Height(in meters)" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight"></label>
+                    <input class="form-control" type="text" id="weight" name="weight" placeholder="Enter Weight(in kg)" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration"></label>
+                    <input class="form-control" type="text" id="duration" name="duration" placeholder="Enter Duration(in mins)" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="heartRate"></label>
+                    <input class="form-control" type="text" id="heartRate" name="heartRate" placeholder="Enter Heart Rate" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="bodyTemp"></label>
+                    <input class="form-control" type="text" id="bodyTemp" name="bodyTemp" placeholder="Enter Body Temperature" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn-custom " type="submit">Check</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>    
